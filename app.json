@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/news/news",
+    "pages/attention/attention",
+    "pages/membercenter/membercenter",
+    "pages/index/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "black",
+    "borderStyle": "white",
+    "selectedColor": "rgb(176,170,168)",
+    "backgroundColor": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "精华",
+      "iconPath": "images/tabBar/tabBar_essence_click_icon.png",
+      "selectedIconPath": "images/tabBar/tabBar_essence_icon.png"
+    },
+    {
+      "pagePath": "pages/news/news",
+      "text": "最新",
+      "iconPath": "images/tabBar/tabBar_new_click_icon.png",
+      "selectedIconPath": "images/tabBar/tabBar_new_icon.png"
+    },
+    {
+      "pagePath": "pages/attention/attention",
+      "text": "关注",
+      "iconPath": "images/tabBar/tabBar_friendTrends_click_icon.png",
+      "selectedIconPath": "images/tabBar/tabBar_friendTrends_icon.png"
+    },
+    {
+      "pagePath": "pages/membercenter/membercenter",
+      "text": "我",
+      "iconPath": "images/tabBar/tabBar_me_click_icon.png",
+      "selectedIconPath": "images/tabBar/tabBar_essence_icon.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug":true
+}

@@ -1,0 +1,55 @@
+/**index.wxss**/
+@import "../common/mainTabCell.wxss";
+
+/*top tab*/
+.top-tab{
+  height:36px;
+  width: 750rpx;
+  border-top: 1rpx solid #dddcdc;
+  color: #7b7b7b;
+  font-size: 15px;
+  background-color: #f7f7f7;
+  z-index: 9999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+}
+.top-tab .top-tab-item{
+  /*display: inline-block;*/
+  /*width: 16%;*/
+  flex-grow: 1;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+.top-tab-item.active {
+  border-bottom:2px solid red;
+  color: red;
+}
+
+.swiper{
+  display: block; 
+  width: 100%; 
+  overflow: hidden;
+  margin: 0;
+  border: 0;
+  margin-top: 37px;
+  background-color: #eaeaea;
+}
+
+
+.scrollView{
+  height: 100%;
+  background-color: #eaeaea;
+}
+
+.item-view{
+  background-color: white;
+  margin: 0 12rpx 10rpx 12rpx;
+  border: 1rpx solid #dddcdc;
+}
+
+

@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<import src="../common/mainTabCell.wxml" />
+
+<view class="top-tab">
+  <view class="top-tab-item {{currentTopItem==idx ? 'active' : ''}}" wx:for="{{topTabItems}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="switchTab">
+    {{item}}
+  </view>
+</view>
+
+<swiper class="swiper" current="{{currentTopItem}}" bindchange="bindChange" duration="300" style="height:{{swiperHeight}}px" >
+
+  <!--全部-->
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData"  >
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+      
+      <view class="item-view " wx:for="{{allDataList}}"  wx:for-item="item">
+        <navigator url="detail">
+          <template is="mainTabCell" data="{{item}}" />
+        </navigator>
+      </view>
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+    </scroll-view>
+  </swiper-item>
+
+  <!--视频-->
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData" >
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+      
+      <view class="item-view" wx:for="{{videoDataList}}"  wx:for-item="item">
+        <navigator url="detail">
+          <template is="mainTabCell" data="{{item}}" />
+        </navigator>
+      </view>
+
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+    </scroll-view>
+  </swiper-item>
+
+  <!--图片-->
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData">
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+      
+      <view class="item-view" wx:for="{{pictureDataList}}"  wx:for-item="item">
+        <navigator url="detail">
+          <template is="mainTabCell" data="{{item}}" />
+        </navigator>
+      </view>
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+    </scroll-view>
+  </swiper-item>
+
+  <!--段子-->
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData">
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+      
+      <view class="item-view" wx:for="{{textDataList}}"  wx:for-item="item">
+        <navigator url="detail">
+          <template is="mainTabCell" data="{{item}}" />
+        </navigator>
+      </view>
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+    </scroll-view>
+  </swiper-item>
+
+  <!--声音-->
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData">
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+      
+      <view class="item-view" wx:for="{{voiceDataList}}"  wx:for-item="item">
+        <navigator url="detail">
+          <template is="mainTabCell" data="{{item}}" />
+        </navigator>
+      </view>
+      <view style="height:12rpx;background-color:#eaeaea"></view>
+    </scroll-view>
+  </swiper-item>
+
+</swiper>
+
