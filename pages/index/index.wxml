@@ -11,7 +11,7 @@
 
   <!--全部-->
   <swiper-item>
-    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshData"  >
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" >
       <view style="height:12rpx;background-color:#eaeaea"></view>
       
       <view class="item-view " wx:for="{{allDataList}}"  wx:for-item="item">

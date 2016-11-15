@@ -4,6 +4,13 @@ const util = require("../../utils/util.js");
 var playingID = -1;
 var types = ["1","41","10","29","31"];
 var dataType = 0;
+var page = 1;//页码
+var allMaxtime = 0;//全部 最大时间
+var videoMaxtime = 0;//视频 最大时间
+var pictureMaxtime = 0;//图片 最大时间
+var textMaxtime = 0;//段子 最大时间
+var voiceMaxtime = 0;//声音 最大时间
+
 var DATATYPE = {
     ALLDATATYPE : "1",
     VIDEODATATYPE : "41",
@@ -72,27 +79,20 @@ Page({
 
     var that = this;
     var parameters = 'a=list&c=data&type='+types[dataType];
-
+    console.log("parameters = "+parameters);
     util.request(parameters,function(res){
-    that.setNewDataWithRes(res,that);
+      page = 1;
+      that.setNewDataWithRes(res,that);
       setTimeout(function(){
-        util.hideToast();
-      },1000);
-    });
+          util.hideToast();
+          wx.stopPullDownRefresh();
+        },1000);
+      });
   },
   
   //监听用户下拉动作
   onPullDownRefresh:function(){
-    console.log("监听用户下拉动作");
-  },
-  //页面上拉触底的处理函数
-  onReachBottom:function(){
-    console.log("页面到达底部的处理函数");
-  },
-
-  //刷新操作
-  refreshData:function(){
-    console.log("下拉刷新");
+    this.refreshNewData();
   },
 
   //滚动后需不要加载数据
@@ -130,30 +130,35 @@ Page({
     switch(types[dataType]) {
       //全部
       case DATATYPE.ALLDATATYPE:
+        allMaxtime = res.data.info.maxtime;
         target.setData({
           allDataList: res.data.list
         });
         break;
       //视频
       case DATATYPE.VIDEODATATYPE:
+        videoMaxtime = res.data.info.maxtime;
         target.setData({
           videoDataList: res.data.list
         });
         break;
       //图片
       case DATATYPE.PICTUREDATATYPE:
+        pictureMaxtime = res.data.info.maxtime;
         target.setData({
             pictureDataList: res.data.list
         });
         break;
       //段子
       case DATATYPE.TEXTDATATYPE:
+        textMaxtime = res.data.info.maxtime;
         target.setData({
           textDataList: res.data.list
         });
         break;
       //声音
       case DATATYPE.VOICEDATATYPE:
+        voiceMaxtime = res.data.info.maxtime;
         target.setData({
           voiceDataList: res.data.list
         });
@@ -162,9 +167,92 @@ Page({
         break;
     }
   },
+
   //加载更多操作
   loadMoreData:function(){
     console.log("加载更多");
+    //加载提示框
+    util.showLoading();
+
+    var that = this;
+    var parameters = 'a=list&c=data&type='+types[dataType] + "&page="+(page+1) + "&maxtime="+this.getMaxtime();
+    console.log("parameters = "+parameters);
+    util.request(parameters,function(res){
+      page += 1;
+      that.setMoreDataWithRes(res,that);
+      setTimeout(function(){
+          util.hideToast();
+          wx.stopPullDownRefresh();
+        },1000);
+      });
+  },
+
+  //获取最大时间
+  getMaxtime:function(){
+    switch(types[dataType]) {
+      //全部
+      case DATATYPE.ALLDATATYPE:
+        return allMaxtime ;
+      //视频
+      case DATATYPE.VIDEODATATYPE:
+        return videoMaxtime ;
+      //图片
+      case DATATYPE.PICTUREDATATYPE:
+        return pictureMaxtime ;
+
+      //段子
+      case DATATYPE.TEXTDATATYPE:
+        return textMaxtime ;
+
+      //声音
+      case DATATYPE.VOICEDATATYPE:
+        return voiceMaxtime;
+      default:
+        return 0;
+    }
+  },
+  //设置加载更多的数据
+  setMoreDataWithRes(res,target) {
+    switch(types[dataType]) {
+      //全部
+      case DATATYPE.ALLDATATYPE:
+        allMaxtime = res.data.info.maxtime;
+        target.setData({
+          allDataList: target.data.allDataList.concat(res.data.list)
+        });
+        break;
+      //视频
+      case DATATYPE.VIDEODATATYPE:
+        videoMaxtime = res.data.info.maxtime;
+        target.setData({
+          videoDataList: target.data.videoDataList.concat(res.data.list)
+        });
+        console.log(array);
+        break;
+      //图片
+      case DATATYPE.PICTUREDATATYPE:
+        pictureMaxtime = res.data.info.maxtime;
+        target.setData({
+            pictureDataList: target.data.pictureDataList.concat(res.data.list)
+        });
+        break;
+      //段子
+      case DATATYPE.TEXTDATATYPE:
+        textMaxtime = res.data.info.maxtime;
+        target.setData({
+          textDataList: target.data.textDataList.concat(res.data.list)
+        });
+        break;
+      //声音
+      case DATATYPE.VOICEDATATYPE:
+        voiceMaxtime = res.data.info.maxtime;
+        target.setData({
+          voiceDataList: target.data.voiceDataList.concat(res.data.list)
+        });
+        break;
+      default:
+        break;
+    }
   },
 
   //视频播放开始播放
