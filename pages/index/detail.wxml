@@ -1,3 +1,17 @@
-<view class="container">
-    详情页
-</view>
+<import src="commentCell.wxml" />
+
+<scroll-view class="scrollview" scroll-y="true">
+    <view class="containt hotcomment" hidden="{{hotcomemnt_hidden}}">
+        <text class="comment_text" >最热评论</text>
+        <template is="commentCell" data="{{item}}"/>
+        <view class="divide_view"></view>
+    </view>
+
+    <view class="newcomment">
+        <text class="comment_text">最新评论</text>
+        <view wx:for="{{dataList}}" wx:for-item="item">
+            <template is="commentCell" data="{{item}}" />
+        </view>
+        
+    </view>
+</scroll-view>

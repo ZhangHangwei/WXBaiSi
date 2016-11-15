@@ -15,7 +15,7 @@
       <view style="height:12rpx;background-color:#eaeaea"></view>
       
       <view class="item-view " wx:for="{{allDataList}}"  wx:for-item="item">
-        <navigator url="detail">
+        <navigator url="detail?id={{item.id}}">
           <template is="mainTabCell" data="{{item}}" />
         </navigator>
       </view>
@@ -29,7 +29,7 @@
       <view style="height:12rpx;background-color:#eaeaea"></view>
       
       <view class="item-view" wx:for="{{videoDataList}}"  wx:for-item="item">
-        <navigator url="detail">
+        <navigator url="detail?id={{item.id}}">
           <template is="mainTabCell" data="{{item}}" />
         </navigator>
       </view>
@@ -44,7 +44,7 @@
       <view style="height:12rpx;background-color:#eaeaea"></view>
       
       <view class="item-view" wx:for="{{pictureDataList}}"  wx:for-item="item">
-        <navigator url="detail">
+        <navigator url="detail?id={{item.id}}">
           <template is="mainTabCell" data="{{item}}" />
         </navigator>
       </view>
@@ -58,7 +58,7 @@
       <view style="height:12rpx;background-color:#eaeaea"></view>
       
       <view class="item-view" wx:for="{{textDataList}}"  wx:for-item="item">
-        <navigator url="detail">
+        <navigator url="detail?id={{item.id}}">
           <template is="mainTabCell" data="{{item}}" />
         </navigator>
       </view>
@@ -72,7 +72,7 @@
       <view style="height:12rpx;background-color:#eaeaea"></view>
       
       <view class="item-view" wx:for="{{voiceDataList}}"  wx:for-item="item">
-        <navigator url="detail">
+        <navigator url="detail?id={{item.id}}">
           <template is="mainTabCell" data="{{item}}" />
         </navigator>
       </view>

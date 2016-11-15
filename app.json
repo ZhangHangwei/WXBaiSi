@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/detail",
     "pages/news/news",
     "pages/attention/attention",
-    "pages/membercenter/membercenter",
-    "pages/index/detail"
+    "pages/membercenter/membercenter"
   ],
   "window":{
     "backgroundTextStyle":"light",

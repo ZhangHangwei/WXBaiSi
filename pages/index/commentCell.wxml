@@ -1,0 +1,25 @@
+<!--评论列表cell模板-->
+<template name="commentCell">
+    <view class="commentCell">
+        <view class="user">
+            <image class="usericon" src="{{item.user.profile_image}}" mode="scaleToFill"></image>
+            <!--<view class="user_zan">
+                <text >42</text>
+            </view>-->
+            <text class="username">{{item.user.username}}</text>
+            <view class="ding">
+                <text>{{item.user.total_cmt_like_count}}</text>
+                <image src="../../images/index/mainCellDing.png" mode="center"></image>
+            </view>
+            
+        </view>
+        <view >
+            <view class="ding_count">
+                <text class="">{{item.like_count}}</text>
+            </view>
+            <view class="content_text">
+                <text>{{item.content}}</text>
+            </view>
+        </view>
+    </view>
+</template>

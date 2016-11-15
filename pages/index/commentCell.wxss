@@ -1,0 +1,72 @@
+.commentCell{
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.usericon{
+    width: 62rpx;
+    height: 62rpx;
+    border-radius: 31rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15rpx;
+    margin-top: 15rpx;
+}
+.username{
+    display: inline-block;
+    font-size: 31rpx;
+    color: #4373a9;
+    margin-left: 15rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+.ding{
+    display: inline-block;
+    float: right;
+    width: 200rpx;
+    height: 100%;
+    text-align: right;
+}
+.ding text{
+    font-size: 20rpx;
+    color: #888888;
+    height: 70rpx;
+    line-height: 70rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.ding image{
+    width: 40rpx;
+    height: 70rpx;
+    margin-left: 10rpx;
+    margin-right: 20rpx;
+    margin-bottom: 10rpx;
+    vertical-align: middle;
+}
+/*这个是头像下方的数字*/
+.ding_count {
+    float: left;
+    display: inline-block;
+    width: 90rpx;
+    text-align: center;
+}
+.ding_count text{
+    display: inline-block;
+    background-color: #b5c7dd;
+    min-width: 58rpx;
+    border-radius: 5rpx;
+    line-height: 26rpx;
+    font-size: 16rpx;
+    color: white;
+    vertical-align: middle;
+}
+.content_text{
+    line-height: 40rpx;
+    font-size: 32rpx;
+    color: #333333;
+    margin-left: 90rpx;
+    margin-right: 50rpx;
+    margin-bottom: 20rpx;
+    
+}
+
