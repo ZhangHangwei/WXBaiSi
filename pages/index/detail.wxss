@@ -1,11 +1,12 @@
 @import "commentCell.wxss";
-
+Page{
+    background-color: white;
+}
 .scrollview{
     height: 100%;
 }
 /*分隔线*/
 .divide_view{
-    margin-top: 15rpx;
     height: 20rpx;
     background-color: #f2f2f2;
 }

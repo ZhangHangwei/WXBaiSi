@@ -31,10 +31,10 @@
 .menu_item{
     background-color: white;
     display: inline-block;
-    width: 24.36%;
+    width: 24.2%;
     height: 200rpx;
     border-bottom: 1rpx solid #f1f0f0;
-    border-right: 1rpx solid #f1f0f0;
+    border-left: 1rpx solid #f1f0f0;
     padding: 2.33rpx;
 }
 .menu_item image{
