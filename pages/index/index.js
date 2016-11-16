@@ -293,5 +293,10 @@ Page({
   //音频结束播放
   audioEndPlay:function(obj){
     this.audioContext.seek(0);
+  },
+  //点击赞按钮
+  zanEvent:function(e){
+    console.log("------赞-------");
+    console.log(e);
   }
 })

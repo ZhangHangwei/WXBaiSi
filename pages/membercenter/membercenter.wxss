@@ -1,0 +1,51 @@
+.cell{
+    margin: 30rpx 0;
+    background-color: white;
+    height: 92rpx;
+    border: 1rpx  solid #bcbcbc;
+    border-left: 0;
+    border-right: 0;
+}
+
+.cell image{
+    display: inline-block;
+    width: 70rpx;
+    height: 100%;
+    margin-left: 20rpx;
+    vertical-align: middle;
+}
+.cell text{
+    font-size: 31rpx;
+    color: #666666;
+    margin-left: 20rpx;
+    line-height: 92rpx;
+    display: inline-block;
+    height: 100%;
+}
+
+.right_arrow{
+    float: right;
+    margin-right: 20rpx;
+}
+
+.menu_item{
+    background-color: white;
+    display: inline-block;
+    width: 24.36%;
+    height: 200rpx;
+    border-bottom: 1rpx solid #f1f0f0;
+    border-right: 1rpx solid #f1f0f0;
+    padding: 2.33rpx;
+}
+.menu_item image{
+    height: 55%;
+    width: 150rpx;
+    display: block;
+    margin: 20rpx auto;
+}
+.menu_item text{
+    display: block;
+    color: #666666;
+    font-size: 31rpx;
+    text-align: center;
+}

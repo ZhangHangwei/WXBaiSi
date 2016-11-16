@@ -1,0 +1,72 @@
+Page{
+    background-color: #483454;
+}
+/*.content{
+    margin: 0;
+    padding: 0;
+    background-color: #483454;
+    height: 100%;
+}*/
+
+.input{
+    margin-top: 243rpx;
+    width: 80%;
+    background-color: #50495a;
+    margin: 0 auto;
+    border: 1rpx solid #605864;
+    border-radius: 10rpx;
+}
+.formline{
+    background-color: #605864;
+    height: 1rpx;
+}
+.input input{
+    height: 92rpx;
+    color: #aba5ab;
+    font-size: 30rpx;
+    padding-left: 19rpx;
+}
+
+.form_button{
+    margin-top: 35rpx;
+    width: 80%;
+    color: white;
+    font-size: 28prx;
+    background-color: #dd6262;
+}
+
+.register_forgetpwd{
+   height: 92rpx;
+   color: #b7adb5;
+   font-size: 28rpx;
+   width: 80%;
+   margin: 0 auto;
+}
+.register_forgetpwd text{
+    line-height: 92rpx;
+    height: 92rpx;
+}
+.forgetpwd{
+    float: right;
+}
+
+.bottom_top{
+    background-color: green;
+    height: 46rpx;
+    text-align: center;
+}
+.bottom_top text{
+    color: white;
+    display: inline-block;
+    height: 46rpx;
+    font-size: 24rpx;
+    line-height: 46rpx;
+    width: 20%;
+    text-align: center;
+}
+.bottom_top image{
+    display: inline-block;
+    width: 35%;
+    height: 46rpx;
+    vertical-align: middle;
+}

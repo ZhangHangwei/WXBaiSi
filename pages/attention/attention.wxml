@@ -1,4 +1,12 @@
 <!--Attention 关注-->
-<view class="container">
-    关注
+
+<view class="content" >
+    <image src="../../images/other/header_cry_icon.png" mode="center"></image>
+    
+    <text>快快登录吧，关注百思最in牛人</text>
+    <text>好友动态让你过把瘾儿~</text>
+    <text>欧耶~~~</text>
+
+    <button bindtap="taplogin">立即登录/注册</button>
 </view>
+

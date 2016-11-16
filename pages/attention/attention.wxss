@@ -1,0 +1,31 @@
+.content{
+    width: 100%;
+    height: 680rpx;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -340rpx;
+}
+
+.content image{
+    display: block;
+    width: 100%;
+    height: 350rpx;
+}
+.content text{
+    font-size: 33rpx;
+    color: #808080;
+    height: 40rpx;
+    display: block;
+    text-align: center;
+    margin:10rpx 0;
+}
+
+.content button{
+    margin-top: 80rpx;
+    width: 80%;
+    font-size: 31rpx;
+    height: 97rpx;
+    line-height: 97rpx;
+    color: #ff0000;
+}

@@ -60,10 +60,30 @@ function hideToast(){
   wx.hideToast();
 }
 
+//显示带取消按钮的消息提示框
+function alertViewWithCancel(title="提示",content="消息提示",confirm,showCancel="true"){
+  wx.showModal({
+    title: title,
+    content: content,
+    showCancel: showCancel,
+    success: function(res) {
+      if (res.confirm) {
+        confirm();
+      }
+    }
+  });
+}
+//显示不取消按钮的消息提示框
+function alertView(title="提示",content="消息提示",confirm){
+  alertViewWithCancel(title,content,confirm,false);
+}
+
 module.exports = {
   formatTime: formatTime,
   request: request,
   showSuccess: showSuccess,
   showLoading: showLoading,
-  hideToast: hideToast
+  hideToast: hideToast,
+  alertViewWithCancel: alertViewWithCancel,
+  alertView: alertView
 }

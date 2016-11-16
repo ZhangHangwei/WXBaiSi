@@ -42,7 +42,7 @@
             <view class="bottom">
 
             <!--赞-->
-            <view class="bottom-item">
+            <view class="bottom-item" catchtap="zanEvent">
                 <view class="bottom-item-content">
                 <image src="../../images/index/mainCellDing.png" mode="center"></image>
                 <text class="bottom-item-zan-text">{{item.love}}</text>

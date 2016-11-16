@@ -1,4 +1,18 @@
 <!--个人中心-->
-<view class="container">
-    个人中心
+
+<view class="cell" bindtap="taplogin">
+    <image src="../../images/other/setup-head-default.png" mode="aspectFit"></image>
+    <text >登录/注册</text>
+    <text class="right_arrow">></text>
 </view>
+<view class="cell">
+    <text>离线下载</text>
+    <text class="right_arrow">></text>
+</view>
+<view style="background-color:white">
+    <view class="menu_item" wx:for="{{dataList}}" wx:for-item="item">
+        <image src="{{item.icon}}" mode="aspectFit"></image>
+        <text>{{item.name}}</text>
+    </view>
+</view>
+<view style="height:20rpx;"></view>

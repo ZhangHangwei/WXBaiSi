@@ -1,10 +1,11 @@
 {
   "pages":[
+    "pages/attention/attention",
     "pages/index/index",
     "pages/index/detail",
-    "pages/news/news",
-    "pages/attention/attention",
-    "pages/membercenter/membercenter"
+    "pages/login/login",
+    "pages/membercenter/membercenter",
+    "pages/news/news"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -40,7 +41,7 @@
       "pagePath": "pages/membercenter/membercenter",
       "text": "我",
       "iconPath": "images/tabBar/tabBar_me_click_icon.png",
-      "selectedIconPath": "images/tabBar/tabBar_essence_icon.png"
+      "selectedIconPath": "images/tabBar/tabBar_me_icon.png"
     }]
   },
   "networkTimeout": {

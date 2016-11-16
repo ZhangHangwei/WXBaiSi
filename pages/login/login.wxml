@@ -1,0 +1,16 @@
+<view class="content">
+    <view style="height:243rpx;"></view>
+    <form bindsubmit="formSubmit">
+        <view class="input">
+            <input name="username" maxlength="18" placeholder="输入用户名"></input>
+            <view class="formline"></view>
+            <input name="password" password maxlength="30" placeholder="请输入密码"></input>
+        </view>
+        <button class="form_button" formType="submit">登录</button>
+    </form>
+
+    <view class="register_forgetpwd">
+            <text class="register" bindtap="register">立即注册</text>
+            <text class="forgetpwd" bindtap="forgetpwd">忘记密码</text>
+    </view>
+</view>
