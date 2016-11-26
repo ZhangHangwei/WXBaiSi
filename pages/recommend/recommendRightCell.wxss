@@ -1,0 +1,56 @@
+
+.right_cell{
+    background-color: white;
+    height: 130rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+    overflow: hidden;
+}
+
+.avatar{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.avatar image {
+    width: 90%;
+    height: 80%;
+    margin: 10% 2% 10% 8%;
+}
+
+.content{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 55%;
+    margin-left: 5rpx;
+}
+
+.content text {
+    display: block;
+    height: 30%;
+}
+
+.content .name {
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 60rpx;
+    margin-top: 13rpx;
+}
+.content .fans {
+    color: #818181;
+    font-size: 22rpx;
+    line-height: 80rpx;
+}
+
+.right_cell button{
+    display: inline-block;
+    width: 23%;
+    font-size: 24rpx;
+    color: #e42e16;
+    height: 50rpx;
+    margin-right: 5rpx;
+    vertical-align: middle;
+    line-height: 50rpx;
+}

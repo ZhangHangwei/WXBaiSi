@@ -40,11 +40,11 @@ function request(parameters = "",success, method = "GET", header = {}) {
 
 //HUD 
 //成功提示
-function showSuccess(title = "成功啦", duration = 5000){
+function showSuccess(title = "成功啦", duration = 2500){
   wx.showToast({
       title: title ,
       icon: 'success',
-      duration:(duration <= 0) ? 5000 : duration
+      duration:(duration <= 0) ? 2500 : duration
   });
 }
 //loading提示

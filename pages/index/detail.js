@@ -24,24 +24,24 @@ Page({
     var parameters = 'a=dataList&c=comment&data_id='+data_id+"&hot=1";
     console.log("parameters = "+parameters);
     util.request(parameters,function(res){
-      page = 1;
-      console.log("最热");
-      
-      var newObj = res.data.hot[0];
-      console.log(newObj);
-      that.setData({
-        hotcomemnt_hidden: newObj ? false : true,
-        item:newObj ? newObj : {},
-        dataList: res.data.data
-      })
-      if (res.data.data.length > 0) {
-        lastcid = res.data.data[res.data.data.length-1].id;
-      }
-      
-      setTimeout(function(){
-          util.hideToast();
-          wx.stopPullDownRefresh();
-        },1000);
+        page = 1;
+        console.log("最热");
+        
+        var newObj = res.data.hot[0];
+        console.log(newObj);
+        that.setData({
+          hotcomemnt_hidden: newObj ? false : true,
+          item:newObj ? newObj : {},
+          dataList: res.data.data
+        })
+        if (res.data.data.length > 0) {
+          lastcid = res.data.data[res.data.data.length-1].id;
+        }
+        
+        setTimeout(function(){
+            util.hideToast();
+            wx.stopPullDownRefresh();
+          },1000);
       });
   },
   refreshData:function(){
@@ -58,19 +58,19 @@ Page({
     console.log("parameters = "+parameters);
     util.request(parameters,function(res){
       
-      if (res.data.data) {
-          page += 1;
-          that.setData({
-            dataList: that.data.dataList.concat(res.data.data)
-          });
-          lastcid = res.data.data[res.data.data.length-1].id;
-          setTimeout(function(){
-            util.hideToast();
-            wx.stopPullDownRefresh();
-          },1000);
-      } else {
-          util.showSuccess("没有新数据了",300);
-      }
+        if (res.data.data) {
+            page += 1;
+            that.setData({
+              dataList: that.data.dataList.concat(res.data.data)
+            });
+            lastcid = res.data.data[res.data.data.length-1].id;
+            setTimeout(function(){
+              util.hideToast();
+              wx.stopPullDownRefresh();
+            },1000);
+        } else {
+            util.showSuccess("没有新数据了",300);
+        }
       });
       
     }

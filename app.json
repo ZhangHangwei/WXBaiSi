@@ -4,7 +4,7 @@
     "pages/index/detail",
     "pages/login/login",
     "pages/membercenter/membercenter",
-    "pages/news/news",
+    "pages/recommend/recommend",
     "pages/attention/attention"
   ],
   "window":{
@@ -26,8 +26,8 @@
       "selectedIconPath": "images/tabBar/tabBar_essence_icon.png"
     },
     {
-      "pagePath": "pages/news/news",
-      "text": "最新",
+      "pagePath": "pages/recommend/recommend",
+      "text": "推荐关注",
       "iconPath": "images/tabBar/tabBar_new_click_icon.png",
       "selectedIconPath": "images/tabBar/tabBar_new_icon.png"
     },

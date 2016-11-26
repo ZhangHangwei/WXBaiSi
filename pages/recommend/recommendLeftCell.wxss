@@ -1,0 +1,28 @@
+
+.left_cell {
+    height: 90rpx;
+    border-bottom: 3rpx solid #f8f7f7;
+}
+.left_margin {
+    background-color: #f1f1f1 ;
+    width: 6rpx;
+    display: inline-block;
+    
+    height: 100%;
+    vertical-align: middle;
+}
+.left_title {
+    color: #777777;
+    margin-left: 24rpx;
+    font-size: 30rpx;
+    height: 100%;
+}
+
+/*被选中*/
+.left_cell_selected .left_margin {
+    background-color: #ff3b30;
+}
+/*被选中的文本颜色*/
+.left_cell_selected .left_title {
+    color: #e42e16;
+}

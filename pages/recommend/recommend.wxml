@@ -1,0 +1,22 @@
+<!--推荐关注-->
+<import src="recommendLeftCell.wxml" />
+<import src="recommendRightCell.wxml" />
+
+<scroll-view scroll-y="true" class="tab left">
+
+    <block wx:for="{{leftTabArray}}">
+        <template is="recommendLeftCell" data="{{item}}" />
+        
+    </block>
+
+</scroll-view>
+
+<scroll-view scroll-y class="tab right" bindscrolltoupper="scrolltoupper">
+    
+    <block wx:for="{{rightTabArray}}" >
+
+        <template is="recommendRightCell" data="{{item}}" />
+
+    </block>
+
+</scroll-view>

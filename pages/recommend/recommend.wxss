@@ -1,0 +1,22 @@
+
+@import "recommendLeftCell.wxss";
+@import "recommendRightCell.wxss";
+
+.tab {
+    height: 100%;
+    margin: 0;
+}
+.left {
+    width: 25%;
+    background-color: #f1f1f1;
+    float: left;
+    
+}
+
+
+.right {
+    width: 75%;
+    background-color: #f1f1f1;
+    float: right;
+}
+

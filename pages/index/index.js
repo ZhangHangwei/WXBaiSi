@@ -10,6 +10,7 @@ var pictureMaxtime = 0;//图片 最大时间
 var textMaxtime = 0;//段子 最大时间
 var voiceMaxtime = 0;//声音 最大时间
 
+//1->全部;41->视频;10->图片;29->段子;31->声音;
 var DATATYPE = {
     ALLDATATYPE : "1",
     VIDEODATATYPE : "41",

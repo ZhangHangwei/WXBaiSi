@@ -1,0 +1,9 @@
+
+<template name="recommendLeftCell">
+    <!-- data-idx 为自定义属性，记录cell的当前位置-->
+    <view id="{{item.id}}" data-idx="{{item.index}}" bindtap="leftCellTap" class="left_cell {{item.selected ? 'left_cell_selected' : ''}}">
+        <view class="left_margin"></view>
+        <text class="left_title">{{item.name}}</text>
+    </view>
+
+</template>
