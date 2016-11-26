@@ -1,11 +1,11 @@
 {
   "pages":[
-    "pages/attention/attention",
     "pages/index/index",
     "pages/index/detail",
     "pages/login/login",
     "pages/membercenter/membercenter",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/attention/attention"
   ],
   "window":{
     "backgroundTextStyle":"light",

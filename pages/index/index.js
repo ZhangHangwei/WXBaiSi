@@ -3,7 +3,6 @@ const util = require("../../utils/util.js");
 //播放的视频或者音频的ID
 var playingID = -1;
 var types = ["1","41","10","29","31"];
-var dataType = 0;
 var page = 1;//页码
 var allMaxtime = 0;//全部 最大时间
 var videoMaxtime = 0;//视频 最大时间
@@ -49,7 +48,6 @@ Page({
   },
   //切换顶部标签
   switchTab:function(e){
-    dataType = e.currentTarget.dataset.idx;
     this.setData({
       currentTopItem:e.currentTarget.dataset.idx
     });
@@ -62,7 +60,6 @@ Page({
   //swiperChange
   bindChange:function(e){
     var that = this;
-    dataType = e.detail.current;
     that.setData({
       currentTopItem:e.detail.current
     });
@@ -78,7 +75,7 @@ Page({
     util.showLoading();
 
     var that = this;
-    var parameters = 'a=list&c=data&type='+types[dataType];
+    var parameters = 'a=list&c=data&type='+types[this.data.currentTopItem];
     console.log("parameters = "+parameters);
     util.request(parameters,function(res){
       page = 1;
@@ -98,7 +95,7 @@ Page({
   //滚动后需不要加载数据
   needLoadNewDataAfterSwiper:function(){
 
-    switch(types[dataType]) {
+    switch(types[this.data.currentTopItem]) {
       //全部
       case DATATYPE.ALLDATATYPE:
         return this.data.allDataList.length > 0 ? false : true;
@@ -127,7 +124,7 @@ Page({
   },
   //设置新数据
   setNewDataWithRes:function(res,target){
-    switch(types[dataType]) {
+    switch(types[this.data.currentTopItem]) {
       //全部
       case DATATYPE.ALLDATATYPE:
         allMaxtime = res.data.info.maxtime;
@@ -175,7 +172,7 @@ Page({
     util.showLoading();
 
     var that = this;
-    var parameters = 'a=list&c=data&type='+types[dataType] + "&page="+(page+1) + "&maxtime="+this.getMaxtime();
+    var parameters = 'a=list&c=data&type='+types[this.data.currentTopItem] + "&page="+(page+1) + "&maxtime="+this.getMaxtime();
     console.log("parameters = "+parameters);
     util.request(parameters,function(res){
       page += 1;
@@ -189,7 +186,7 @@ Page({
 
   //获取最大时间
   getMaxtime:function(){
-    switch(types[dataType]) {
+    switch(types[this.data.currentTopItem]) {
       //全部
       case DATATYPE.ALLDATATYPE:
         return allMaxtime ;
@@ -213,7 +210,7 @@ Page({
   },
   //设置加载更多的数据
   setMoreDataWithRes(res,target) {
-    switch(types[dataType]) {
+    switch(types[this.data.currentTopItem]) {
       //全部
       case DATATYPE.ALLDATATYPE:
         allMaxtime = res.data.info.maxtime;

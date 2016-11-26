@@ -1,6 +1,8 @@
 <template name="mainTabCell">
-    <!--顶部-->
-    <view class="top">
+
+    <view class="mainTabCell">
+        <!--顶部-->
+        <view class="top">
         
             <!--头像-->
             <image class="avator" src="{{item.profile_image}}" mode="aspectFit"></image>
@@ -14,10 +16,10 @@
             <!--更多按钮-->
             <image class="morebtnnormal" src="../../images/index/morebtnnormal.png" mode="center" ></image>
             
-            </view>
+        </view>
             
-            <!--内容-->
-            <view class="content">
+        <!--内容-->
+        <view class="content">
 
             <text class="content-text">{{item.text}}</text>
 
@@ -36,10 +38,10 @@
                 <audio id="{{item.id}}" src="{{item.voiceuri}}" poster="{{item.bimageuri}}" author="{{item.screen_name}}" bindplay="audioplay" bindended="audioEndPlay" controls></audio>
             </view>
             
-            </view>
+        </view>
             
-            <!--底部-->
-            <view class="bottom">
+        <!--底部-->
+        <view class="bottom">
 
             <!--赞-->
             <view class="bottom-item" catchtap="zanEvent">
@@ -79,5 +81,7 @@
                 </view>
             </view>
 
+        </view>
     </view>
+    
 </template>

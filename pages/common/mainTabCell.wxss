@@ -1,3 +1,9 @@
+.mainTabCell{
+  background-color: white;
+  margin: 12rpx 12rpx 10rpx 12rpx;
+  border: 1rpx solid #dddcdc;
+}
+
 /*头像*/
 .avator{
   display: inline-block;

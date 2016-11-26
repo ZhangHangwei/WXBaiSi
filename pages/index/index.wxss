@@ -46,10 +46,5 @@
   background-color: #eaeaea;
 }
 
-.item-view{
-  background-color: white;
-  margin: 0 12rpx 10rpx 12rpx;
-  border: 1rpx solid #dddcdc;
-}
 
 
