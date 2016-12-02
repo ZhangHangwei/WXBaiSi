@@ -20,7 +20,7 @@ Page({
         //默认选中第一个
         temArray[0].selected = true;
         temArray[0].index = 0;
-        for (var i = 1; i < res.data.list.length; i++) {
+        for (var i = 1; i < temArray.length; i++) {
            temArray[i].selected = false;
            temArray[i].index = i;
         }

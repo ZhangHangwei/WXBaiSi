@@ -9,8 +9,8 @@
 .left {
     width: 25%;
     background-color: #f1f1f1;
-    float: left;
-    
+    /*float: left;*/
+    position: fixed;
 }
 
 

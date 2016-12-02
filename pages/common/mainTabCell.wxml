@@ -30,7 +30,7 @@
 
             <!--视频-->
             <view class="content-multimedia" hidden="{{item.videouri ? false : true}}">
-                <video id="{{item.id}}" src="{{item.videouri}}" bindplay="videoPlay" bindended="videoEndPlay" controls style="width:{{item.width}}rpx;height:{{item.height}}rpx;" ></video>
+                <video id="{{item.id}}" src="{{item.videouri}}" bindplay="videoPlay" bindended="videoEndPlay" catchtap="tapVideo" controls style="width:{{item.width}}rpx;height:{{item.height}}rpx;" ></video>
             </view>
 
             <!--音频-->
