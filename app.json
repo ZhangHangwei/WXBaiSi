@@ -47,5 +47,5 @@
   "networkTimeout": {
     "request": 10000
   },
-  "debug":false
+  "debug":true
 }
