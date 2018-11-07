@@ -45,7 +45,7 @@
     }]
   },
   "networkTimeout": {
-    "request": 10000
+    "request": 15000
   },
   "debug":false
 }
